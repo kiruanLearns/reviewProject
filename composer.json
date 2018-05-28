@@ -1,0 +1,12 @@
+{
+  "name": "reviewProject",
+  "license": "MIT",
+  "type": "project",
+  "description": "small project to review code",
+  "require": {
+    "php": "^7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "7.1"
+  }
+}

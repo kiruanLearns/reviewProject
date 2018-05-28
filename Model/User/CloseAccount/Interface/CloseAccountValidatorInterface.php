@@ -6,6 +6,6 @@ interface CloseAccountValidatorInterface
 {
    public function canBeClosed();
 
-    /** @var Exception[]  */
-    public function getErrors();
+   /** @var \Exception[]  */
+   public function getErrors();
 }

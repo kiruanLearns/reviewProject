@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kevin
- * Date: 28.05.18
- * Time: 14:13
- */
+
+namespace reviewProject\Entity;
+
+class Client extends User
+{
+
+}

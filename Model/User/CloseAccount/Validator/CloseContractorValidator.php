@@ -2,12 +2,15 @@
 
 namespace reviewProject\Model\Validator;
 
+use reviewProject\Entity\User;
+use reviewProject\Model\CannotCloseAccountException;
+
 class CloseContractorValidator implements CloseAccountValidatorInterface
 {
     /** @var User $user */
     protected $user;
 
-    /** @var Exception[] */
+    /** @var \Exception[] */
     protected $errors;
 
     public function __construct(User $user)

@@ -2,13 +2,15 @@
 
 namespace reviewProject\Model\Validator;
 
+use reviewProject\Entity\User;
+
 class CloseClientValidator implements CloseAccountValidatorInterface
 {
 
     /** @var User $user */
     protected $user;
 
-    /** @var Exception[] */
+    /** @var \Exception[] */
     protected $errors;
 
     public function __construct(User $user)
@@ -20,14 +22,16 @@ class CloseClientValidator implements CloseAccountValidatorInterface
 
     /**
      * @return bool
-     * @throws PropelException
      */
-    public function canBeClosed()
+    public function canBeClosed(): bool
     {
-        return !ProjectsPeer::hasActiveOrders($this->user);
+        return false;
     }
 
-    public function getErrors()
+    /**
+     * @return array
+     */
+    public function getErrors(): array
     {
         $this->errors;
     }

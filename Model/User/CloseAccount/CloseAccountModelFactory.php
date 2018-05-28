@@ -7,7 +7,8 @@ use reviewProject\Entity\Client;
 use reviewProject\Entity\Contractor;
 use reviewProject\Model\Validator\CloseClientValidator;
 use reviewProject\Model\Validator\CloseContractorValidator;
-use reviewProject\Model\
+use reviewProject\Model\Order\CancelOrderModel;
+
 class CloseAccountModelFactory
 {
     /**
@@ -24,7 +25,7 @@ class CloseAccountModelFactory
             return new CloseContractorAccountModel($user, new CloseContractorValidator($user), new CancelOrderModel($user));
         }
 
-        throw new InvalidArgumentException(sprintf('Invalid user provided. id:%d', $user->getId()));
+        throw new \InvalidArgumentException(sprintf('Invalid user provided. id:%d', $user->getId()));
 
     }
 

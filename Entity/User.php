@@ -1,5 +1,9 @@
 <?php
 
+namespace reviewProject\Entity;
+
+use reviewProject\Enum\UserStatus;
+
 /**
  * Created by PhpStorm.
  * User: kevin
@@ -24,41 +28,42 @@ abstract class User
     private $status;
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getId()
+    public function getId() : int
+
     {
         return $this->id;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getName()
+    public function getName() : string
     {
         return $this->name;
     }
 
     /**
-     * @param mixed $name
+     * @param string $name
      */
-    public function setName($name)
+    public function setName(string $name): void
     {
         $this->name = $name;
     }
 
     /**
-     * @return mixed
+     * @return UserStatus
      */
-    public function getStatus()
+    public function getStatus() : UserStatus
     {
         return $this->status;
     }
 
     /**
-     * @param mixed $status
+     * @param UserStatus $status
      */
-    public function setStatus($status)
+    public function setStatus(UserStatus $status) : void
     {
         $this->status = $status;
     }
