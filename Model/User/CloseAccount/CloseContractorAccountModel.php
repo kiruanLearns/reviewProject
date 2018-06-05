@@ -82,6 +82,7 @@ class CloseContractorAccountModel implements CloseAccountModelInterface
     protected function logEvent($event) : void
     {
        //@todo log event
+
     }
 
     /**
